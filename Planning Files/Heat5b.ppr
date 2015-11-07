@@ -1,0 +1,90 @@
+VUMIPLAB
+CIP 4.1.9
+PREDICTION FILE
+0100
+
+[COMMENTS]
+Exported on: Thu Oct 29 14:58:05 2015
+
+[IDENTIFICATION]
+// DICOM tag of Patient ID: 0010-0020, Study UID(optional): 0020-000D, Series UID: 0020-000E
+// Image Info: DimX DimY DimZ VszX VszY VszZ OriX OriY OriZ DataType(optional) BytOrder(opt) HdrSize(opt) Modality(opt) Min(opt) Max(opt)
+
+Plan       UID:  3939839046865
+I1   Patient ID:  heat5b
+I1   Study  UID:  1.2.826.0.1.3680043.2.594.23483.27142.27363.23827.16433
+I1   Series UID:  1.2.826.0.1.3680043.2.594.8652.13338.20436.7349.3562.1
+I1   IMAGE INFO:  640 640 355 0.400000 0.400000 0.400002 1 2 -3 2 1 0 CT -1000.000000 9792.000000
+I1        ALIAS:  Target
+I2   Patient ID:  
+I2   Series UID:  
+I2        CV ID:  
+I2     Atlas ID:  
+I2     FILENAME:  atlas\atlas.im
+I2   IMAGE INFO:  768 768 145 0.218750 0.218750 0.400000 1 2 3 2 1 0 CT 0.000000 3560.000000
+I2        ALIAS:  Atlas
+REF IMAGE INFO:  I1
+
+[TRANSFORMATION REF]  // 4x4 world matrix mapping points from world to REF
+     1.0000000     0.0000000     0.0000000     0.0000000
+     0.0000000     1.0000000     0.0000000     0.0000000
+     0.0000000     0.0000000     1.0000000     0.0000000
+     0.0000000     0.0000000     0.0000000     1.0000000
+
+[TRANSFORMATION I1->REF]  // 4x4 world matrix mapping points from REF to I1
+     1.0000000     0.0000000     0.0000000     0.0000000
+     0.0000000     1.0000000     0.0000000     0.0000000
+     0.0000000     0.0000000     1.0000000     0.0000000
+     0.0000000     0.0000000     0.0000000     1.0000000
+
+[TRANSFORMATION I2->REF]  // 4x4 world matrix mapping points from REF to I2
+     0.9326514    -0.3513368     0.0819999     0.3412933
+     0.3591383     0.9257634    -0.1182452   -10.4233360
+    -0.0343686     0.1397305     0.9895930    27.2861919
+     0.0000000     0.0000000     0.0000000     1.0000000
+
+[ANATOMICAL POINT I1]
+// One anatomical point per line with parameters defined as
+// [id name x y z r g b]
+// id:                uniq id
+// name:              name
+// x y z:             image coordinates in pixel
+// r g b:             optional color
+1  "Cochlea"    234.4526    348.7500    239.9506  255  0  0
+2  "IAC"    258.0801    351.2500    236.1702  255  0  0
+3  "Incus"    213.4241    356.2500    233.5712  255  0  0
+
+[ANATOMICAL POINT I2]
+// One anatomical point per line with parameters defined as
+// [id name x y z r g b]
+// id:                uniq id
+// name:              name
+// x y z:             image coordinates in pixel
+// r g b:             optional color
+1  "Cochlea"    550.9733    345.5571     85.5491  0  255  0
+2  "IAC"    522.2074    359.2714     87.8432  0  255  0
+3  "Incus"    592.9235    340.9857     92.7593  0  255  0
+
+[ANATOMY]                 // AC, PC, Mid-plane point in patient coordinates
+   127.80000    112.80000     70.80035 
+   127.80000    142.80000     70.80035 
+   127.80000    127.80000     10.80035 
+
+[MARKER]                // one marker set per line, base (anchor) followed by optional tip (marker) in patient coordinates
+   195.50284    178.09485    132.29475    195.55659    193.43347    132.09616 
+   190.40991    208.45236     81.63367    201.51079    201.66626     89.75985 
+   206.60388    148.33133     81.66814    206.91724    162.07953     88.46543 
+
+[TRAJECTORY]              // one trajectory per line, target point followed by optional entry point in patient coordinates and id
+   163.64787    144.15508     98.46769    170.32596    148.67700     99.13543  "Right"  1.59 " 248 248  64" 
+//     -0.09949      0.55600     -0.82521    -35.84787 
+//      0.00000      0.82932      0.55877     16.35507 
+//      0.99504      0.05559     -0.08251    -27.66734 
+//      0.00000      0.00000      0.00000      1.00000 
+//     -0.09949     -0.00000      0.99504     23.96343 
+//      0.55600      0.82932      0.05559      7.90586 
+//     -0.82521      0.55877     -0.08251    -41.00354 
+//      0.00000     -0.00000     -0.00000      1.00000 
+
+
+[END]
